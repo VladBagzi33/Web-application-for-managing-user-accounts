@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accaunts</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+
+    <!-- Navbar start-->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand">Accounts</a>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a href="accounts-view" class="nav-link">Accaunts</a>
+                </li>
+                <li class="nav-item">
+                    <a href="add-account-view" class="nav-link">Add Accaunts</a>
+                </li>
+            </ul>
+        </div>   
+    </nav>
+
+    <!-- Navbar start-->
+    <!-- Accounts view start -->
+
+    <div class="container-fluid">
+        <div class="row view" id="accounts-view">
+            <div class="col-10 offset-1">
+                <h2 class="display-4 m-4">Accounts</h2>
+                <div class="row">
+                    <div class="col-8 offset-2">
+                        <table class="table table-striped">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>#</th>
+                                    <th>Name</th>
+                                    <th>Last Name</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                    <th>Edit</th>
+                                    <th>Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody  id="accounts-table-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- Accounts view end -->
+
+
+        <!--Add account view-->
+
+        <div class="row view" id="add-account-view">
+            <div class="col-10 offset-1">
+                <h2 class="display-4 m-4">Add Account</h2>
+                <div class="row">
+                    <div class="col-8 offset-2">
+                        <input type="text" class="form-control" placeholder="id"><br>
+                        <input type="text" class="form-control" placeholder="Name"><br>
+                        <input type="text" class="form-control" placeholder="LastName"><br>
+                        <input type="text" class="form-control" placeholder="Email"><br>
+                        <input type="text" class="form-control" placeholder="Phone"><br>
+                        <button id="save" class="form-control btn btn-info">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Add account view end-->
+        <!--Edit account view-->
+
+        <div class="row view" id="edit-account-view">
+            <div class="col-10 offset-1">
+                <h2 class="display-4 m-4">Edit Account</h2>
+                <div class="row">
+                    <div class="col-8 offset-2">
+                        <input type="text" class="form-control eId"><br>
+                        <input type="text" class="form-control eName"><br>
+                        <input type="text" class="form-control eLastName"><br>
+                        <input type="text" class="form-control eEmail"><br>
+                        <input type="text" class="form-control ePhone"><br>
+                        <button id="edit" class="form-control btn btn-warning">Edit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Edit account view end-->
+
+
+    </div>
+
+    <script src="./db.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
